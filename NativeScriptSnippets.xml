@@ -1,0 +1,26 @@
+
+<!--
+  Page loaded event equals loaded() function in controller
+
+-->
+
+<Page loaded="loaded">
+
+
+  <!--
+    on tap do function()
+
+  -->
+  <Button text="Sign in" tap="signIn"/>
+
+<!--
+  for doing a listview with two-way data-binding
+
+-->
+<GridLayout>
+  <ListView items="{{ groceryList }}">
+      <ListView.itemTemplate>
+          <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center"/>
+      </ListView.itemTemplate>
+  </ListView>
+</GridLayout>

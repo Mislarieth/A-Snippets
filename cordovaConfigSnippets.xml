@@ -1,0 +1,18 @@
+<!--
+
+    for changing the android sdk versions
+
+-->
+
+
+<platform name="android">
+  <preference name="android-minSdkVersion" value="19" />
+  <preference name="android-targetSdkVersion" value="19" />
+</platform>
+
+
+<!--
+    for using vue in cordova with browserify:
+
+    https://coligo.io/building-a-mobile-app-with-cordova-vuejs/
+-->
