@@ -1,0 +1,40 @@
+<!--
+  SocketIO setup
+-->
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io('127.0.0.1');
+
+</script>
+
+<!--
+  SocketIO event handling
+-->
+<script>
+  socket.on('connect', function () {
+    console.log("You are connected");
+  });
+  socket.on('log_message', function (data) {
+    console.log(data);
+    socket.emit('private message', { message: 'Got log message' });
+  });
+</script>
+
+<!--
+  SocketIO namespace
+-->
+<script>
+  var chat = io.connect('http://localhost/chat')
+    , shop = io.connect('http://localhost/shop');
+
+
+  chat.on('log_message', function (data) {
+    console.log(data);
+    socket.emit('private message', { message: 'Got log message' });
+  });
+
+  shop.on('item', function () {
+    shop.emit('woot');
+  });
+</script>
