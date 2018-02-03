@@ -3,6 +3,7 @@
 
   okay so npm install --save-dev mocha chai request
 
+  ---What do they do?---
   mocha: testing
   chai: assertion "expect"
   request: http requests
